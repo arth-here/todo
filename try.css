@@ -1,0 +1,128 @@
+:root {
+    --colour-1: #ffffff;
+    --colour-2: #f7e6dd;
+    --colour-3: #1a1a1a;
+    --colour-4: #f0f0f0;
+    --colour-5: #181818;
+    --colour-6: #242424;
+
+    --blur-bg: #f2f2f2;
+    --blur-border: #a0c3ff;
+    --conversations: #76a7fa;
+}
+
+:root {
+    --font-1: "Inter", sans-serif;
+    --section-gap: 25px;
+    --border-radius-1: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: var(--font-1);
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    padding: var(--section-gap);
+    background: var(--colour-1);
+    color: var(--colour-3);
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    gap: var(--section-gap);
+    height: 100%;
+}
+
+.box {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: var(--blur-bg);
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--blur-border);
+}
+
+.conversations {
+    max-width: 260px;
+    padding: var(--section-gap);
+    overflow: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conversation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.new_convo {
+    padding: 8px 12px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    border: 1px dashed var(--conversations);
+    border-radius: var(--border-radius-1);
+}
+
+.stop_generating {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000000;
+}
+
+.stop_generating button {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: var(--blur-bg);
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--blur-border);
+    padding: 10px 15px;
+    color: var(--colour-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    animation: show_popup 0.4s;
+}
+
+.field .about {
+    font-size: 14px;
+    color: var(--colour-3);
+}
+
+.bottom_buttons button {
+    padding: 8px 12px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    border: 1px solid #4285f4;
+    border-radius: var(--border-radius-1);
+    width: 100%;
+}
+
+

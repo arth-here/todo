@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="try.css">
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Let'sChat</title>
+</head>
+<body>
+    <div class="gradient"></div>
+        <div class="row">
+            <div class="box conversations">
+                <div class="top">
+                    <button class="new_convo">
+                        <i class="fa-regular fa-plus"></i>
+                        <span>New chat</span>
+                    </button>
+                    <div class="spinner"></div>
+                </div>
+                <div class="bottom_buttons">
+                    <button>
+                        <i class="fa-regular fa-trash"></i>
+                        <span>Clean chat</span>
+                    </button>
+                </div>
+            </div>
+            <div class="conversation">
+                <div class="stop_generating stop_generating-hidden">
+                      <button id="cancelButton">
+                        <span>Stop</span>
+                        <i class="fa-regular fa-stop"></i>
+                    </button>
+                </div>
+                <div class="box" id="messages">
+                </div>
+                <div class="user-input">
+                    <div class="box input-box">
+                        <textarea id="message-input" placeholder="Ask me anything..." style="white-space: pre-line;"></textarea>
+                        <div id="send-button">
+                            <i class="fa-regular fa-paper-plane-top"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                         <div class="field" style="margin-left:15px;">
+                    <label for="toggle-switch" style="justify-content: center;">
+                    <input type="checkbox" id="toggle-switch" name="toggle-switch" style="display: none;">
+                    </label>
+                   </div>
+                </div>
+            </div>
+        </div> 
+        <div class="mobile-sidebar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+</body>
+</html>
